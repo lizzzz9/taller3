@@ -15,23 +15,8 @@ public class Main {
 
     public static class App implements QuarkusApplication {
 
-        //caso1 :inyeccion por atributo
         @Inject
         private PedidoService pedidoService;
-
-        //caso2: inyeccion por constructor
-        //private  PedidoService pedidoService;
-        //@Inject 
-        //public App(PedidoService pedidoService){
-        //this.pedidoService = pedidoService;
-        //}
-
-        //caso3 : inyeccion por metodo 
-        //private  PedidoService pedidoService;
-        //@Inject 
-        //public void setPedidoService(PedidoService pedidoService){
-        //this.pedidoService = pedidoService;
-        //}
 
         @Override
         public int run(String... args) {
