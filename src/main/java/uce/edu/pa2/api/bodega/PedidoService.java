@@ -8,7 +8,7 @@ import jakarta.inject.Inject;
 @ApplicationScoped
 //@Unremovable
 public class PedidoService {
-  /*
+  /* 
    * //DI por constructor
    * 
    * // public PedidoService(NotificadorMail notificadorMail){
