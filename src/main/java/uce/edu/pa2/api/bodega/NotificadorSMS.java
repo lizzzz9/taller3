@@ -8,7 +8,7 @@ public class NotificadorSMS implements Notificador {
 
     public void enviar(String destino, String mensaje) {
 
-        System.out.println("se envia el sms al correo: " + destino);
+        System.out.println("se envia el sms a: " + destino);
         System.out.println("con el mensaje: " + mensaje);
     }
 
