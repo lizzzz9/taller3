@@ -1,6 +1,6 @@
 package uce.edu.pa2.api.bodega;
 
-public class Pedido {
+public class Pedido { 
 
     private String cliente;
     private String producto;
