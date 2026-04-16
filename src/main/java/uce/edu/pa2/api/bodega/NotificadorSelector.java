@@ -11,17 +11,12 @@ public class NotificadorSelector {
 
     @Inject
     private NotificadorSMS sms;
-    @Inject
-    private NotificadorWhatsapp ws;
+
 
     public Notificador seleccionar(double total) {
         if (total > 100) {
             // Mail
             return mail;
-        } 
-        if (total <= 50) {
-            // whatsapp
-            return ws;
         } else {
 
             // SMS
