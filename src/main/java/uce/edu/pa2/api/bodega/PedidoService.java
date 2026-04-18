@@ -1,12 +1,10 @@
 package uce.edu.pa2.api.bodega;
 
-import io.quarkus.arc.Unremovable;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
-
 @ApplicationScoped
-//@Unremovable
+// @Unremovable
 public class PedidoService {
   /*
    * //DI por constructor
@@ -30,12 +28,15 @@ public class PedidoService {
   @Inject
   private NotificadorSelector selector;
 
-  public void registrar(Pedido pedido) {
+  
+  public void registrar(Pedido pedido ,PagoEstrategia pago  ) {
     // Lógica para registrar el pedido
     System.out.println("registrando pedido");
     System.out.println(" cliente: " + pedido.getCliente());
     System.out.println("Total " + pedido.getTotal());
     System.out.println("guardando en la base de datos");
+
+    pago.realizar(pedido.getTotal());
 
     Notificador notificador = this.selector.seleccionar(pedido.getTotal());
     notificador.enviar(pedido.getDestino(), "Pedido registrado");

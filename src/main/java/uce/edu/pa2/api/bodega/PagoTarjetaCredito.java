@@ -1,0 +1,15 @@
+package uce.edu.pa2.api.bodega;
+
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class PagoTarjetaCredito implements PagoEstrategia{
+
+    @Override
+    public void realizar(double valor) {
+        System.err.println("Presenta la pantalla donde pide los datos de la tarjeta ");
+        System.out.println("Realizando cobro");
+        
+    }
+
+}
